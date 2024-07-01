@@ -6,35 +6,35 @@ def brain_even(name):
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    user_correct_answers = 0
-    user_correct_answers_needed = 3
+    target_score = 0
+    target_score_needed = 3
 
-    while user_correct_answers < user_correct_answers_needed:
+    yes_answer  = 'yes'
+    no_answer = 'no'
+
+    while target_score < target_score_needed:
         random_num = random.randint(1, 20)
         print(f'Question: {random_num}')  
         user_answer = str(input('Your answer: '))
 
-        if (random_num % 2 == 0 and user_answer.lower() == 'yes') or (random_num % 2 != 0 and user_answer.lower() == 'no'):
+        
+        if (random_num % 2 == 0 and user_answer.lower() == yes_answer) or (random_num % 2 != 0 and user_answer.lower() == no_answer):
             print('Correct!')
-            user_correct_answers += 1
-        elif (random_num % 2 != 0 and user_answer.lower() == 'yes'):
+            target_score += 1
+
+        elif (random_num %2 != 0 and user_answer.lower() == yes_answer) or (random_num % 2 == 0 and user_answer.lower() == no_answer):
             print("'no' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
-        elif (random_num % 2 == 0 and user_answer.lower() == 'no'):
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            print(f"Let's try again, {name}!")
-            break
-
-    print(f'Congratulations, {name}')
+    
+    if target_score == target_score_needed:
+        print(f'Congratulations, {name}')
 
     
 
 def main():
     name = welcome_user()
     brain_even(name)
-
-
 
 
 if __name__ == '__main__':
