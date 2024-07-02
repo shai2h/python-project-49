@@ -1,3 +1,1 @@
-cli.cpython-312.pyc
-brain_games.cpython-312.pyc
-/brain_games/scripts/__pycache__/brain_even.cpython-310.pyc
+*.pyc
