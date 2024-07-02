@@ -15,13 +15,11 @@ def brain_even(name):
     while target_score < target_score_needed:
         random_num = random.randint(1, 20)
         
-        while True:
-            print(f'Question: {random_num}')  
-            user_answer = str(input('Your answer: ')).lower().strip()
-            if (user_answer == yes_answer) or (user_answer == no_answer):
-                break  
-
-        
+        print(f'Question: {random_num}')  
+        user_answer = str(input('Your answer: ')).lower().strip()
+        if (user_answer != yes_answer) and (user_answer != no_answer):
+            print(f"Let's try again, {name}!")
+            break
 
         
         if (random_num % 2 == 0 and user_answer.lower() == yes_answer) or (random_num % 2 != 0 and user_answer.lower() == no_answer):
