@@ -1,8 +1,9 @@
 from brain_games.cli import welcome_user
 import random
+from brain_games.utils import get_random_number, get_user_answer, is_game_complete
+
 
 def brain_even(name):
-
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
@@ -12,11 +13,11 @@ def brain_even(name):
     yes_answer  = 'yes'
     no_answer = 'no'
 
-    while target_score < target_score_needed:
-        random_num = random.randint(1, 20)
+    while is_game_complete(target_score, target_score_needed):
+        random_num = get_random_number()
         
         print(f'Question: {random_num}')  
-        user_answer = str(input('Your answer: ')).lower().strip()
+        user_answer = get_user_answer()
         if (user_answer != yes_answer) and (user_answer != no_answer):
             print(f"Let's try again, {name}!")
             break
