@@ -1,5 +1,4 @@
 from brain_games.cli import welcome_user
-import random
 from brain_games.utils import get_random_number, get_user_answer, is_game_complete
 
 
