@@ -8,8 +8,8 @@ def brain_gcd(name):
     target_score = 0
     target_score_needed = 3
     while is_game_complete(target_score, target_score_needed):
-        num_one = get_random_number()
-        num_two = get_random_number()
+        num_one = get_random_number(0, 20)
+        num_two = get_random_number(0, 20)
         correct_answer = gcd(num_one, num_two)
 
         print(f'Question: {num_one} {num_two}')

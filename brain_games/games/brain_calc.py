@@ -9,8 +9,8 @@ def brain_calc(name):
 
 
     while is_game_complete(target_score, target_score_needed):
-        random_num_one = get_random_number()
-        random_num_two = get_random_number()
+        random_num_one = get_random_number(0, 20)
+        random_num_two = get_random_number(0, 20)
         random_operation = random.choice(operation)
         
         expression = f'{random_num_one} {random_operation} {random_num_two}'

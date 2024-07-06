@@ -13,7 +13,7 @@ def brain_even(name):
     no_answer = 'no'
 
     while is_game_complete(target_score, target_score_needed):
-        random_num = get_random_number()
+        random_num = get_random_number(0, 20)
         
         print(f'Question: {random_num}')  
         user_answer = get_user_answer()
