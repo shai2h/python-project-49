@@ -2,6 +2,7 @@ from brain_games.cli import welcome_user
 import random
 from brain_games.utils import get_random_number, is_game_complete
 
+
 def brain_calc(name):
     target_score = 0
     target_score_needed = 3
