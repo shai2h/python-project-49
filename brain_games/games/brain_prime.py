@@ -20,6 +20,7 @@ def brain_prime(name):
     target_score_needed = 3
     yes_answer = 'yes'
     no_answer = 'no'
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     while is_game_complete(target_score, target_score_needed):
         random_num = get_random_number(1, 20)
@@ -35,7 +36,7 @@ def brain_prime(name):
             target_score += 1
         else:
             print(f"Let's try again, {name}!")
-        break
+            break
     if target_score == target_score_needed:
         print(f'Congratulations, {name}')
 
