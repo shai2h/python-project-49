@@ -2,8 +2,6 @@ from brain_games.utils import get_random_number, is_game_complete, gcd
 from brain_games.cli import welcome_user
 
 
-
-
 def brain_gcd(name):
     target_score = 0
     target_score_needed = 3
@@ -18,12 +16,14 @@ def brain_gcd(name):
             target_score += 1
             print('Correct!')
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(."
+                f"Correct answer was '{user_answer}'."
+            )
             print(f"Let's try again, {name}!")
             break
     if target_score == target_score_needed:
         print(f'Congratulations, {name}')
-
 
 
 def main():
