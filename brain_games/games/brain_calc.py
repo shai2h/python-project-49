@@ -7,6 +7,7 @@ def brain_calc(name):
     target_score = 0
     target_score_needed = 3
     operation = ['+', '-', '*']
+    print("What is the result of the expression?")
     while is_game_complete(target_score, target_score_needed):
         random_num_one = get_random_number(0, 20)
         random_num_two = get_random_number(0, 20)
@@ -17,16 +18,22 @@ def brain_calc(name):
 
         print(f'Question: {expression}')
         user_answer = input('Your answer: ')
-
-        if user_answer == answer_expression:
-            target_score += 1
-            print('Correct!')
-        else:
+        try:
+            if int(user_answer) == answer_expression:
+                target_score += 1
+                print('Correct!')
+            else:
+                print(
+                    f"'{user_answer}' is wrong answer ;(.\n"
+                    f"Correct answer was '{answer_expression}'."
+                )
+                print(f"Let's try again, {name}!")
+                break
+        except ValueError:
             print(
-                f"'{user_answer}' is wrong answer ;(."
+                f"'{user_answer}' is wrong answer ;(.\n"
                 f"Correct answer was '{answer_expression}'."
             )
-            print(f"Let's try again, {name}!")
             break
     if target_score == target_score_needed:
         print(f'Congratulations, {name}')
