@@ -5,6 +5,7 @@ from brain_games.cli import welcome_user
 def brain_gcd(name):
     target_score = 0
     target_score_needed = 3
+    print("Find the greatest common divisor of given numbers.")
     while is_game_complete(target_score, target_score_needed):
         num_one = get_random_number(0, 20)
         num_two = get_random_number(0, 20)
@@ -23,7 +24,7 @@ def brain_gcd(name):
             print(f"Let's try again, {name}!")
             break
     if target_score == target_score_needed:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
 
 
 def main():

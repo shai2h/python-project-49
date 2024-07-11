@@ -9,7 +9,7 @@ from brain_games.cli import welcome_user
 def brain_progression(name):
     target_score = 0
     target_score_needed = 3
-
+    print("What number is missing in the progression?")
     while is_game_complete(target_score, target_score_needed):
         nums_amount = get_random_number(5, 20)
 
@@ -31,7 +31,7 @@ def brain_progression(name):
             print('Correct!')
             target_score += 1
     if target_score == target_score_needed:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
 
 
 def main():
