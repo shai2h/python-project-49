@@ -6,30 +6,39 @@ from brain_games.utils import (
 from brain_games.cli import welcome_user
 
 
+def generate_progression():
+    start = get_random_number(1, 10)
+    step = get_random_number(1, 10)
+    length = get_random_number(5, 10)
+    progression = [str(start + i * step) for i in range(length)]
+    return progression
+
+
 def brain_progression(name):
     target_score = 0
     target_score_needed = 3
     print("What number is missing in the progression?")
+
     while is_game_complete(target_score, target_score_needed):
-        nums_amount = get_random_number(5, 20)
+        progression = generate_progression()
+        hidden_index = get_random_number(0, len(progression) - 1)
+        correct_answer = progression[hidden_index]
+        progression[hidden_index] = '..'
 
-        nums_list = [str(i) for i in range(1, nums_amount, 2)]
-
-        nums = len(nums_list)
-        random = get_random_number(0, nums - 1)
-
-        right_num = nums_list[random]
-        nums_list[random] = '..'
-
-        print(f'Question: {nums_list}')
+        print(f'Question: {" ".join(progression)}')
         user_answer = get_user_answer()
 
-        if user_answer != right_num:
-            print(f"Let's try again, {name}!")
-            break
-        else:
+        if user_answer == correct_answer:
             print('Correct!')
             target_score += 1
+        else:
+            print(
+                f"'{user_answer}' is wrong answer ;(."
+                f"Correct answer was '{correct_answer}'."
+            )
+            print(f"Let's try again, {name}!")
+            break
+
     if target_score == target_score_needed:
         print(f'Congratulations, {name}!')
 
