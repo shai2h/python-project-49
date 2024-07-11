@@ -36,7 +36,7 @@ def brain_calc(name):
             )
             break
     if target_score == target_score_needed:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
 
 
 def main():
