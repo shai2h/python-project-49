@@ -36,10 +36,6 @@ def brain_prime(name):
             target_score += 1
             correct_answer = user_answer
         else:
-            print(
-                f"'{user_answer}' is wrong answer ;(.\n"
-                f"Correct answer was '{correct_answer}'."
-            )
             print(f"Let's try again, {name}!")
             break
     if target_score == target_score_needed:
