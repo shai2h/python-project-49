@@ -20,13 +20,14 @@ def brain_gcd(name):
                 print('Correct!')
             else:
                 print(
-                    f"'{user_answer}' is wrong answer ;(."
+                    f"'{user_answer}' is wrong answer ;(.\n"
                     f"Correct answer was '{correct_answer}'."
                 )
                 print(f"Let's try again, {name}!")
                 break
         except ValueError:
             print(f"Let's try again, {name}!")
+            break
     if target_score == target_score_needed:
         print(f'Congratulations, {name}!')
 

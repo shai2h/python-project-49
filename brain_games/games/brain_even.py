@@ -20,10 +20,6 @@ def brain_even(name):
         print(f'Question: {random_num}')
         user_answer = get_user_answer()
 
-        if (user_answer != yes_answer) and (user_answer != no_answer):
-            print(f"Let's try again, {name}!")
-            break
-
         if random_num % 2 == 0:
             correct_answer = yes_answer
         else:
@@ -34,7 +30,7 @@ def brain_even(name):
             target_score += 1
         else:
             print(
-                f"'{user_answer}' is wrong answer ;(."
+                f"'{user_answer}' is wrong answer ;(.\n"
                 f"Correct answer was '{correct_answer}'."
             )
             print(f"Let's try again, {name}!")
