@@ -34,7 +34,6 @@ def brain_prime(name):
         ):
             print('Correct!')
             target_score += 1
-            correct_answer = user_answer
         else:
             print(f"Let's try again, {name}!")
             break
