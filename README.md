@@ -14,8 +14,25 @@ curl -sSL https://install.python-poetry.org | python3
 
 # Install
 1. Clone ssh
-```git@github.com:shai2h/python-project-49.git```
-2. 
+```
+git@github.com:shai2h/python-project-49.git
+```
+2. Go to repository
+```
+cd ../repository_name
+```
+3. Install dependencies
+```
+poetry install
+```
+
+4. Update dependencies
+```
+poetry update
+```
+
+# Start
+
 
 
 
