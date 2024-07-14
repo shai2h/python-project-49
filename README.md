@@ -2,8 +2,8 @@
 ####“Brain Games” is a set of five console games built on the principle of popular mobile applications for brain training. Each game asks questions that must be answered correctly. After three correct answers, the game is considered completed. Wrong answers end the game and prompt you to play it again.
 
 ## Minimum Requirements
-####python = "^3.10" <br>
-####prompt = "^0.4.1"
+#### python = "^3.10" <br>
+#### prompt = "^0.4.1"
 
 ## Poetry
 ### linux, macOS, Windows (WSL)
@@ -13,24 +13,24 @@ curl -sSL https://install.python-poetry.org | python3
 ```
 
 # Install
-####1. Clone ssh
+#### 1. Clone ssh
 ```
 git@github.com:shai2h/python-project-49.git
 ```
-####2. Go to repository
+#### 2. Go to repository
 ```
 cd ../repository_name
 ```
-####3. Install dependencies
+#### 3. Install dependencies
 ```
 poetry install
 ```
 
-####4. Update dependencies
+#### 4. Update dependencies
 ```
 poetry update
 ```
-####5. Let's install it in the user's environment
+#### 5. Let's install it in the user's environment
 ```
 python3 -m pip install --user dist/hexlet_code-0.1.0-py3-none-any.whl
 ```
