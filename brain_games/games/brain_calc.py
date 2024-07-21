@@ -2,6 +2,7 @@ from brain_games.cli import welcome_user
 import random
 from brain_games.utils import get_random_number, is_game_complete
 
+
 def question_calc():
     operation = ['+', '-', '*']
     random_num_one = get_random_number(0, 20)
@@ -10,14 +11,13 @@ def question_calc():
     expression = f'{random_num_one} {random_operation} {random_num_two}'
     return expression, eval(expression)
 
+
 def brain_calc(name):
     target_score = 0
     target_score_needed = 3
     print("What is the result of the expression?")
-    
     while is_game_complete(target_score, target_score_needed):
         expression, answer_expression = question_calc()
-        
         print(f'Question: {expression}')
         user_answer = input('Your answer: ')
         try:
