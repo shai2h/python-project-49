@@ -11,7 +11,10 @@ def generate_progression():
     step = get_random_number(1, 10)
     length = get_random_number(5, 10)
     progression = [str(start + i * step) for i in range(length)]
-    return progression
+    hidden_index = get_random_number(0, len(progression) - 1)
+    correct_answer = progression[hidden_index]
+    progression[hidden_index] = '..'
+    return progression, correct_answer
 
 
 def brain_progression(name):
@@ -20,14 +23,11 @@ def brain_progression(name):
     print("What number is missing in the progression?")
 
     while is_game_complete(target_score, target_score_needed):
-        progression = generate_progression()
-        hidden_index = get_random_number(0, len(progression) - 1)
-        correct_answer = progression[hidden_index]
-        progression[hidden_index] = '..'
+        
+        progression, correct_answer = generate_progression()
 
         print(f'Question: {" ".join(progression)}')
         user_answer = get_user_answer()
-
         if user_answer == correct_answer:
             print('Correct!')
             target_score += 1

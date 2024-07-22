@@ -21,7 +21,6 @@ def brain_gcd(name):
     print("Find the greatest common divisor of given numbers.")
     while is_game_complete(target_score, target_score_needed):
         num_one, num_two, correct_answer = question_gcd()
-        print(correct_answer) #delete later
         print(f'Question: {num_one} {num_two}')
         user_answer = input("Your answer: ")
         try:
