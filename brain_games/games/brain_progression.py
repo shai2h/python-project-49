@@ -23,7 +23,7 @@ def brain_progression(name):
     print("What number is missing in the progression?")
 
     while is_game_complete(target_score, target_score_needed):
-        
+
         progression, correct_answer = generate_progression()
 
         print(f'Question: {" ".join(progression)}')

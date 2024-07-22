@@ -1,4 +1,3 @@
-from brain_games.cli import welcome_user
 import random
 from brain_games.utils import get_random_number, is_game_complete
 
@@ -39,12 +38,3 @@ def brain_calc(name):
             break
     if target_score == target_score_needed:
         print(f'Congratulations, {name}!')
-
-
-def main():
-    name = welcome_user()
-    brain_calc(name)
-
-
-if __name__ == '__main__':
-    main()
