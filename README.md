@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bfd427637d3296c59338/maintainability)](https://codeclimate.com/github/shai2h/python-project-49/maintainability)
 
 # Brain games
-####“Brain Games” is a set of five console games built on the principle of popular mobile applications for brain training. Each game asks questions that must be answered correctly. After three correct answers, the game is considered completed. Wrong answers end the game and prompt you to play it again.
+#### “Brain Games” is a set of five console games built on the principle of popular mobile applications for brain training. Each game asks questions that must be answered correctly. After three correct answers, the game is considered completed. Wrong answers end the game and prompt you to play it again.
 
 ## Minimum Requirements
 #### python = "^3.10" <br>
