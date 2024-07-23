@@ -13,7 +13,7 @@ def is_prime():
             correct_answer = 'no'
     correct_answer = 'yes'
     return random_num, correct_answer
-    
+
 
 def brain_prime():
     name = welcome_user()

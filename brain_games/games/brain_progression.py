@@ -15,6 +15,6 @@ def generate_progression():
 
 
 def brain_progression():
-    name = welcome_user() 
+    name = welcome_user()
     rules = "What number is missing in the progression?"
     run_game(generate_progression, rules, name)

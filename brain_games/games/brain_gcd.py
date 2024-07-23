@@ -15,6 +15,7 @@ def question_gcd():
     correct_answer = gcd(num_one, num_two)
     return num_one, num_two, correct_answer
 
+
 def brain_gcd():
     name = welcome_user()
     rules = 'Find the greatest common divisor of given numbers.'
