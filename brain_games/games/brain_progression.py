@@ -11,7 +11,7 @@ def generate_progression():
     hidden_index = get_random_number(0, len(progression) - 1)
     correct_answer = progression[hidden_index]
     progression[hidden_index] = '..'
-    return progression, correct_answer
+    return ' '.join(progression), correct_answer
 
 
 def brain_progression():
