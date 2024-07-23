@@ -4,7 +4,7 @@ from brain_games.cli import welcome_user
 
 
 def is_prime():
-    random_num = get_random_number(0, 20)
+    random_num = get_random_number(1, 20)
     correct_answer = ''
     if random_num < 2:
         correct_answer = 'no'
