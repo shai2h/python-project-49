@@ -1,8 +1,5 @@
-from brain_games.utils import (
-    get_random_number,
-    is_game_complete,
-    get_user_answer
-)
+from brain_games.utils import get_random_number
+from brain_games.scripts.run_games import run_game
 from brain_games.cli import welcome_user
 
 
@@ -17,36 +14,7 @@ def generate_progression():
     return progression, correct_answer
 
 
-def brain_progression(name):
-    target_score = 0
-    target_score_needed = 3
-    print("What number is missing in the progression?")
-
-    while is_game_complete(target_score, target_score_needed):
-
-        progression, correct_answer = generate_progression()
-
-        print(f'Question: {" ".join(progression)}')
-        user_answer = get_user_answer()
-        if user_answer == correct_answer:
-            print('Correct!')
-            target_score += 1
-        else:
-            print(
-                f"'{user_answer}' is wrong answer ;(.\n"
-                f"Correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            break
-
-    if target_score == target_score_needed:
-        print(f'Congratulations, {name}!')
-
-
-def main():
-    name = welcome_user()
-    brain_progression(name)
-
-
-if __name__ == '__main__':
-    main()
+def brain_progression():
+    name = welcome_user() 
+    rules = "What number is missing in the progression?"
+    run_game(generate_progression, rules, name)

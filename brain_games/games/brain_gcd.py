@@ -1,4 +1,5 @@
-from brain_games.utils import get_random_number, is_game_complete
+from brain_games.utils import get_random_number
+from brain_games.scripts.run_games import run_game
 from brain_games.cli import welcome_user
 
 
@@ -14,38 +15,7 @@ def question_gcd():
     correct_answer = gcd(num_one, num_two)
     return num_one, num_two, correct_answer
 
-
-def brain_gcd(name):
-    target_score = 0
-    target_score_needed = 3
-    print("Find the greatest common divisor of given numbers.")
-    while is_game_complete(target_score, target_score_needed):
-        num_one, num_two, correct_answer = question_gcd()
-        print(f'Question: {num_one} {num_two}')
-        user_answer = input("Your answer: ")
-        try:
-            user_answer = int(user_answer)
-            if user_answer == correct_answer:
-                target_score += 1
-                print('Correct!')
-            else:
-                print(
-                    f"'{user_answer}' is wrong answer ;(.\n"
-                    f"Correct answer was '{correct_answer}'."
-                )
-                print(f"Let's try again, {name}!")
-                break
-        except ValueError:
-            print(f"Let's try again, {name}!")
-            break
-    if target_score == target_score_needed:
-        print(f'Congratulations, {name}!')
-
-
-def main():
+def brain_gcd():
     name = welcome_user()
-    brain_gcd(name)
-
-
-if __name__ == '__main__':
-    main()
+    rules = 'Find the greatest common divisor of given numbers.'
+    run_game(question_gcd, rules, name)

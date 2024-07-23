@@ -5,7 +5,12 @@ def run_game(question_func, rules, name):
     target_score_needed = 3
     print(rules)
     while is_game_complete(target_score, target_score_needed):
-        question, correct_answer = question_func()
+        question_result = question_func()
+        if len(question_result) == 3:
+            question1, question2, correct_answer = question_result
+            question = f'{question1} {question2}'
+        else:
+            question, correct_answer = question_result
         print(f'Question: {question}')
         user_answer = input('Your answer: ')
         try:
