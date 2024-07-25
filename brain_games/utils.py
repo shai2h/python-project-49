@@ -1,8 +1,3 @@
-import random
-
-
-def get_random_number(start, end):
-    return random.randint(start, end)
 
 
 def get_user_answer():
