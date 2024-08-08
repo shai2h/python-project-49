@@ -1,4 +1,4 @@
-from brain_games.scripts.brain_games import welcome_user
+from brain_games.run_games import welcome_user
 
 
 def main():
@@ -7,6 +7,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# Пустая строка
