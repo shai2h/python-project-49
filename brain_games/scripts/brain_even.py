@@ -1,12 +1,9 @@
-from brain_games.scripts.run_games import run_game
-from brain_games.games.brain_even import generate_even_question
-from brain_games.cli import welcome_user
+from brain_games.run_games import run_game
+from brain_games.games import brain_even
 
 
 def main():
-    name = welcome_user()
-    rules = 'Answer "yes" if the number is even, otherwise answer "no".'
-    run_game(generate_even_question, rules, name)
+    run_game(brain_even)
 
 
 if __name__ == '__main__':

@@ -1,12 +1,9 @@
-from brain_games.scripts.run_games import run_game
-from brain_games.games.brain_progression import generate_progression
-from brain_games.cli import welcome_user
+from brain_games.run_games import run_game
+from brain_games.games import brain_progression
 
 
 def main():
-    name = welcome_user()
-    rules = "What number is missing in the progression?"
-    run_game(generate_progression, rules, name)
+    run_game(brain_progression)
 
 
 if __name__ == '__main__':

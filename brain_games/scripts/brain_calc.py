@@ -1,12 +1,9 @@
-from brain_games.scripts.run_games import run_game
-from brain_games.games.brain_calc import generate_calc_question
-from brain_games.cli import welcome_user
+from brain_games.run_games import run_game
+from brain_games.games import brain_calc
 
 
 def main():
-    name = welcome_user()
-    rules = 'What is the result of the expression?'
-    run_game(generate_calc_question, rules, name)
+    run_game(brain_calc)
 
 
 if __name__ == '__main__':
