@@ -1,15 +1,15 @@
 import random
-from brain_games.utils import is_even
 
-RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+RANDOM_NUM_FROM = 0
+RANDOM_NUM_TO = 20
+RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+def is_even(num):
+    return num % 2 == 0
 
 
 def get_question_and_answer():
-    RANDOM_NUM_FROM = 0
-    RANDOM_NUM_TO = 20
     random_num = random.randint(RANDOM_NUM_FROM, RANDOM_NUM_TO)
-    if is_even(random_num):
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
+    correct_answer = 'yes' if is_even(random_num) else 'no'
     return random_num, correct_answer
